@@ -1,0 +1,413 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior:smooth;
+}
+.flex {
+    display: flex;
+}
+/*h2,h3{
+    display: inline;
+    color: inherit;
+    text-decoration: none;
+    background-size: 0 100%;
+    background: linear-gradient(to top, crimson 0%, crimsons 4px, transparent 5px);
+}*/
+/*********************BODY*********************/
+body {
+    width: 100%;
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(146 12 196) 0%, rgb(251 168 33) 90%);
+}
+/*********************HEADER*********************/
+header {
+    margin: auto;
+    width: 90%;
+    height: 8vh;
+    top: 0;
+    /*position: absolute; */
+    background: transparent; 
+}
+.logo{
+    font-size: 2rem;
+    color: #eee;
+    z-index: 20;
+}
+nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*Padding à gauche*/
+    padding: 2rem;
+}
+.toggle{
+    display: none;
+}
+.toggle i{
+    color: white;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 500px;
+}
+.menu li a{
+    color: white;
+    text-decoration: none;
+}
+/*********************MAIN*********************/
+main {
+    width: 90%;
+    margin: auto;
+}
+/*********************Section 1*********************/
+#firstbanner{
+    background-image: url(../img/moon.jpg);
+    height: 500px; /*On donne une hauteur de 500 à l'image*/
+    background-position: center; /*On centre l'image par rapport à la section*/
+    background-repeat: no-repeat; /*On ne repete pas l'image si la taille ne convient pas*/
+    background-size: cover; /*On redimensionne l'image d'arrière plan pour couvrir tout le conteneur*/
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+#firstbanner h1{
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 2px 2px 5px;
+    text-align: center;
+    font-weight: bold;
+    
+}
+#firstbanner p{
+    color: hsl(0, 0%, 100%);
+    text-shadow: rgb(0, 0, 0) 2px 2px 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#firstbanner button{
+    background-color: transparent;
+    color: hsl(0, 0%, 100%);
+    text-shadow: rgb(0, 0, 0) 2px 2px 5px;
+    border: 2px solid rgb(255, 255, 255);
+    margin-top: 10px;
+    padding: 12px 28px;
+    text-align: center;
+}
+/*********************Section 2*********************/
+#section2{
+    display: flex;
+    background-color: rgb(250, 250, 250);
+    justify-content: space-evenly;
+    padding: 50px;
+    align-items:baseline;
+    gap: 20px;
+}
+/*********************Section 2 (sous-section-1)*********************/
+.sous-section-1{
+    text-align: left;
+    width: 40%;
+}
+.sous-section-1 h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(73, 73, 73);
+    margin-bottom: 10px;
+}
+.sous-section-1 p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.sous-section-1 p:last-child {
+    font-style: italic;
+}
+/*********************Section 2 (sous-section-2)*********************/
+.sous-section-2 i{
+    color: rgb(196 37 78);
+}
+.flex-icone{
+    display: flex;
+    align-items: baseline;
+    padding-bottom: 5pxpx;
+}
+.sous-section-2 i{
+    margin-right: 5px;
+}
+.sous-section-2 h2{
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(73, 73, 73);
+}
+.sous-section-2-1{
+    padding-bottom: 10px;
+}
+.sous-section-2-1 p{
+    padding-left: 20px;
+}
+.sous-section-2 h3{
+    color: rgb(73, 73, 73);
+}
+.sous-section-2 p{
+    font-style: italic;
+}
+/*********************Accordion*********************/
+.accordion {
+    background-color: rgb(20 22 73);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+.active, .accordion:hover {
+    background-color: rgb(180 27 99);
+}
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    color: white;
+}
+/*********************Section 3*********************/
+#section3{
+    position: relative;
+    width: 100%;
+}
+#section3 figure{
+    display: flex;
+    flex-wrap: wrap;
+}
+#section3 figure img {
+    width: 25%;
+    object-fit: contain;
+}
+.absoluteposition{
+    position: absolute;
+    left: 12.5%;
+    top: 25%;
+    color: #eee;
+}
+
+/*********************Section 4*********************/
+#section4{
+    padding: 50px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+}
+#section4 h2 {
+    text-align: center;
+    color: rgb(73, 73, 73);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 20px;
+}
+#section4 span{
+    border: 2px solid #444;
+    ;
+}
+#section4 p{
+    font-style: italic;
+}
+.customer-capture img {
+    height: 90px;
+    width: auto;
+    border-radius: 50%;
+}
+.customer-capture {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.customer-capture figcaption{
+    padding-left: 10px;
+}
+.customer-capture-reverse img{
+    height: 90px;
+    width: auto;
+    border-radius: 50%;
+}
+.customer-capture-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+#section4 button{
+    border: 2px solid crimson;
+    color: crimson;
+    margin-top: 10px;
+    padding: 12px 28px;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    background-color: transparent;
+    
+}
+/*********************Section 5*********************/
+#section5{
+    background-image: url(../img/nightsky.png);
+    height: 400px; /*On donne une hauteur de 500 à l'image*/
+    background-position: center; /*On centre l'image par rapport à la section*/
+    background-repeat: no-repeat; /*On ne repete pas l'image si la taille ne convient pas*/
+    background-size: cover; /*On redimensionne l'image d'arrière plan pour couvrir tout le conteneur*/
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+#section5 h2{
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 2px 2px 5px;
+    text-align: center;
+    font-weight: bold;
+}
+#section5 p{
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 2px 2px 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#section5 button{
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(0, 0, 0) 2px 2px 5px;
+    border: 2px solid crimson;
+    margin-top: 10px;
+    padding: 12px 28px;
+    text-align: center;
+}
+/*********************Section 6*********************/
+#section6{
+    padding: 50px;
+    background-color: rgb(255, 255, 255);
+}
+#section6 h2{
+    color: #939393;
+    text-align: center;
+    padding-top: 20px;
+}
+.formulaire{
+    width: 80%;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    padding-top: 25px;
+    gap: 25px;
+}
+
+.partit p{
+    color: #777;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.partit label input{
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    height: 30px;
+}
+.partit textarea {
+    resize: none;
+    width: 400px;
+    height: 80px;
+}
+#section6 form input[type="submit"] {
+    padding: 12px 28px;
+    text-align: center;
+    color: #eee;
+    border: 2px solid hsl(206, 25%, 87%);
+    background-color: crimson;
+}
+/*********************Footer*********************/
+footer{
+    background-color: rgb(0, 0, 0);
+    padding: 50px;
+    width: 90%;
+    display: flex;
+    vertical-align: top;
+    margin: auto;
+    gap: 100px;
+}
+footer h3{
+    color: white;
+    padding-bottom: 10px;
+}
+footer p{
+    color: rgb(190, 190, 190);
+    padding-bottom: 10px;
+}
+footer section{
+    width: 100%;
+    margin-top: 30px;
+}
+.about{
+    margin-left: 20px;
+}
+.about p{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.newsletter{
+    margin: top 20px;;
+}
+.newsletter p{
+    margin-top: 5px;
+    width: fit-content;
+    margin-bottom: 5px;
+}
+.newsletter form{
+    display: flex;
+    flex-direction: column;
+}
+.newsletter form input{
+    width: 200px;
+    height: 30px;
+    background-color: transparent;
+}
+.newsletter form button{
+    width: 150px;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 2px solid crimson;
+    margin-top: 10px;
+    padding: 12px 28px;
+    text-align: center;
+}
+.carre{
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+footer i{
+    width: 20px;
+    height: 20px;
+    color: rgb(255, 255, 255);
+}
